@@ -1,0 +1,352 @@
+[
+  {
+    "id": "iTrust-01",
+    "project": "iTrust",
+    "kind": "glossary",
+    "source": "AccessDAO.java",
+    "lines": [
+      14,
+      14
+    ],
+    "quote": " * DAO stands for Database Access Object. All DAOs are intended to be reflections of the database, that is,",
+    "rationale": "Class documentation expands DAO.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "DAO",
+      "database access object"
+    ]
+  },
+  {
+    "id": "iTrust-02",
+    "project": "iTrust",
+    "kind": "glossary",
+    "source": "UpdateICDCodeListAction.java",
+    "lines": [
+      16,
+      17
+    ],
+    "quote": " * The International Statistical Classification of Diseases and Related Health Problems \n * (most commonly known by the abbreviation ICD) provides codes to classify diseases and a ",
+    "rationale": "Code documentation identifies the long name.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "ICD",
+      "international statistical classification of diseases and related health problems"
+    ]
+  },
+  {
+    "id": "iTrust-03",
+    "project": "iTrust",
+    "kind": "glossary",
+    "source": "UpdateLOINCListAction.java",
+    "lines": [
+      17,
+      18
+    ],
+    "quote": " * Logical Observation Identifiers Names and Codes (LOINC) is a database and universal\n *  standard for identifying medical laboratory observations. ",
+    "rationale": "Code documentation spells out LOINC.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "LOINC",
+      "logical observation identifiers names and codes"
+    ]
+  },
+  {
+    "id": "iTrust-04",
+    "project": "iTrust",
+    "kind": "glossary",
+    "source": "UpdateNDCodeListAction.java",
+    "lines": [
+      16,
+      17
+    ],
+    "quote": " * The National Drug Code (NDC) is a universal product identifier used in the\n * United States for drugs intended for human use.",
+    "rationale": "Code documentation spells out NDC.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "NDC",
+      "national drug code"
+    ]
+  },
+  {
+    "id": "iTrust-05",
+    "project": "iTrust",
+    "kind": "relationship",
+    "source": "AccessDAO.java",
+    "lines": [
+      62,
+      62
+    ],
+    "quote": "\t\t\tDBUtil.closeConnection(conn, ps);",
+    "rationale": "The DAO invokes the shared connection cleanup function.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "DBUtil.java",
+    "relation": "call"
+  },
+  {
+    "id": "iTrust-06",
+    "project": "iTrust",
+    "kind": "relationship",
+    "source": "AddHCPAction.java",
+    "lines": [
+      58,
+      58
+    ],
+    "quote": "\t\tString pwd = authDAO.addUser(newMID, Role.HCP, RandomPassword.getRandomPassword());",
+    "rationale": "The add-personnel action obtains an initial password from the helper.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "RandomPassword.java",
+    "relation": "call"
+  },
+  {
+    "id": "iTrust-07",
+    "project": "iTrust",
+    "kind": "relationship",
+    "source": "AddOfficeVisitAction.java",
+    "lines": [
+      22,
+      22
+    ],
+    "quote": "public class AddOfficeVisitAction extends PatientBaseAction {",
+    "rationale": "The action extends the patient action base class.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "PatientBaseAction.java",
+    "relation": "inheritance"
+  },
+  {
+    "id": "iTrust-08",
+    "project": "iTrust",
+    "kind": "relationship",
+    "source": "AddPatientValidator.java",
+    "lines": [
+      14,
+      14
+    ],
+    "quote": "public class AddPatientValidator extends BeanValidator<PatientBean> {",
+    "rationale": "The patient validator extends the generic validator.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "BeanValidator.java",
+    "relation": "inheritance"
+  },
+  {
+    "id": "eTour-01",
+    "project": "eTour",
+    "kind": "glossary",
+    "source": "CardPR.java",
+    "lines": [
+      163,
+      164
+    ],
+    "quote": "     * @Param unisa.gps.etour.bean.BeanRefreshmentPoint PR - the bean contains the\n     *        data of RefreshmentPoint selected.",
+    "rationale": "Parameter documentation uses PR for a refreshment point.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "PR",
+      "refreshment point"
+    ]
+  },
+  {
+    "id": "eTour-02",
+    "project": "eTour",
+    "kind": "glossary",
+    "source": "CulturalHeritage.java",
+    "lines": [
+      249,
+      251
+    ],
+    "quote": "        if (null == btnNewBC) {\n            btnNewBC = new JButton();\n            btnNewBC.setText(\"<html> New <br> Cultural Heritage </ html>\");",
+    "rationale": "The button name uses BC for the Cultural Heritage action. Check the scope of the abbreviation.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "BC",
+      "cultural heritage"
+    ]
+  },
+  {
+    "id": "eTour-03",
+    "project": "eTour",
+    "kind": "glossary",
+    "source": "DBRefreshmentPoint.java",
+    "lines": [
+      35,
+      36
+    ],
+    "quote": "// Query clearing\n            String query = \"DELETE FROM puntodiristoro WHERE Id =\" + pIdRefreshmentPoint;",
+    "rationale": "The refreshment point deletion query uses this database table name.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "refreshment point",
+      "puntodiristoro"
+    ]
+  },
+  {
+    "id": "eTour-04",
+    "project": "eTour",
+    "kind": "relationship",
+    "source": "AdvancedSearch.java",
+    "lines": [
+      3,
+      3
+    ],
+    "quote": "public class AdvancedSearch extends Search {",
+    "rationale": "Advanced search extends the shared search implementation.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "Search.java",
+    "relation": "inheritance"
+  },
+  {
+    "id": "eTour-05",
+    "project": "eTour",
+    "kind": "relationship",
+    "source": "AdvertisementAgencyManager.java",
+    "lines": [
+      20,
+      20
+    ],
+    "quote": "public class AdvertisementAgencyManager extends AdvertisementManager implements IAdvertisementAgencyManager {",
+    "rationale": "The agency-specific manager extends the advertisement manager.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "AdvertisementManager.java",
+    "relation": "inheritance"
+  },
+  {
+    "id": "eTour-06",
+    "project": "eTour",
+    "kind": "relationship",
+    "source": "AdvertisementAgencyManager.java",
+    "lines": [
+      77,
+      77
+    ],
+    "quote": "            if (!ControlData.checkBeanNews(pNews)) {",
+    "rationale": "The manager invokes validation on the news bean.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "ControlData.java",
+    "relation": "call"
+  },
+  {
+    "id": "eTour-07",
+    "project": "eTour",
+    "kind": "relationship",
+    "source": "AdvertisementManager.java",
+    "lines": [
+      57,
+      57
+    ],
+    "quote": "            if (!ControlData.checkBeanBanner(banner)) {",
+    "rationale": "The manager invokes validation on the banner bean.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "ControlData.java",
+    "relation": "call"
+  },
+  {
+    "id": "SMOS-01",
+    "project": "SMOS",
+    "kind": "glossary",
+    "source": "DBConnessione.java",
+    "lines": [
+      74,
+      76
+    ],
+    "quote": "                USER_NAME = properties.getProperty(\"connection.username\");\n                if (USER_NAME.equals(\"\")) {\n                    USER_NAME = Utility.ottenereUtenteNome();",
+    "rationale": "The connection username property falls back to the helper named ottenereUtenteNome.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "username",
+      "nome utente"
+    ]
+  },
+  {
+    "id": "SMOS-02",
+    "project": "SMOS",
+    "kind": "glossary",
+    "source": "managerUser.html",
+    "lines": [
+      53,
+      53
+    ],
+    "quote": "           <p class=\"button\"><a class=\"menuLink\" href=\"../userManagement/insertUser.jsp\">Nuovo Utente</a></p>",
+    "rationale": "The Italian button text points to the insertUser action.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "nuovo utente",
+      "insert user"
+    ]
+  },
+  {
+    "id": "SMOS-03",
+    "project": "SMOS",
+    "kind": "glossary",
+    "source": "managerUser.html",
+    "lines": [
+      42,
+      42
+    ],
+    "quote": "                 [<a style=\"font-size:11px\" class=\"genericLink\" href=\"../../logout\">Esci</a>, <a style=\"font-size:11px\" class=\"genericLink\" href=\"../userManagement/alterPersonalDate.jsp\">Modifica Password</a>]",
+    "rationale": "The interface links Esci to the logout endpoint.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "terms": [
+      "esci",
+      "logout"
+    ]
+  },
+  {
+    "id": "SMOS-04",
+    "project": "SMOS",
+    "kind": "relationship",
+    "source": "DBConnessione.java",
+    "lines": [
+      57,
+      57
+    ],
+    "quote": "            File fileProp = new File(Ambiente.ottenerePoolPropertiesPath());",
+    "rationale": "Connection setup invokes the environment path helper.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "Ambiente.java",
+    "relation": "call"
+  },
+  {
+    "id": "SMOS-05",
+    "project": "SMOS",
+    "kind": "relationship",
+    "source": "MailUtility.java",
+    "lines": [
+      15,
+      15
+    ],
+    "quote": "\t\tprops.put(\"mail.smtp.host\", Utility.ottenereServerSmtp());",
+    "rationale": "Mail setup reads the SMTP server setting from Utility.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "Utility.java",
+    "relation": "call"
+  },
+  {
+    "id": "SMOS-06",
+    "project": "SMOS",
+    "kind": "relationship",
+    "source": "ServletAggiornamentoGiustificato.java",
+    "lines": [
+      40,
+      40
+    ],
+    "quote": "\t\tManagerRegistrati mR= ManagerRegistrati.ottenereIstanza();",
+    "rationale": "The servlet obtains the register manager from its static factory.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "ManagerRegistrati.java",
+    "relation": "call"
+  },
+  {
+    "id": "SMOS-07",
+    "project": "SMOS",
+    "kind": "relationship",
+    "source": "ServletAggiornamentoInsegnamento.java",
+    "lines": [
+      49,
+      49
+    ],
+    "quote": "\t\tManagerInsegnamento managerTeaching = ManagerInsegnamento.ottenereIstanza();",
+    "rationale": "The servlet obtains the teaching manager from its static factory.",
+    "draft_origin": "assistant-assisted exploratory starter",
+    "target": "ManagerInsegnamento.java",
+    "relation": "call"
+  }
+]

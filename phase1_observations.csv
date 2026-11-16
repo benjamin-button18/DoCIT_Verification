@@ -1,0 +1,10 @@
+project,method,linked_requirements,delta_map,delta_ndcg_at_10,ap_improved,ap_tied,ap_declined,glossary_appended,positive_relationship_support,ordered_top10_changed,largest_ap_gain_requirement,largest_ap_loss_requirement
+iTrust,unverified_glossary,105,-0.00002664,0.00000000,0,102,3,6,0,2,UC10E1.txt,UC9S2.txt
+iTrust,automatic_graph_only,105,0.01345253,0.00937395,71,23,11,0,105,94,UC19S2.txt,UC10S1.txt
+iTrust,unverified_glossary_and_relations_preview,105,0.00002127,-0.00064708,2,76,27,6,105,13,UC1E1.txt,UC23S3.txt
+eTour,unverified_glossary,57,0.00007103,0.00002027,4,49,4,17,0,2,UC43.txt,UC4.txt
+eTour,automatic_graph_only,57,0.02031455,0.00908610,48,4,5,0,57,57,UC17.txt,UC32.txt
+eTour,unverified_glossary_and_relations_preview,57,0.00238914,-0.00110803,18,14,25,17,57,35,UC17.txt,UC7.txt
+SMOS,unverified_glossary,67,0.00009619,0.00005870,4,63,0,5,0,2,SMOS67.txt,SMOS10.txt
+SMOS,automatic_graph_only,67,0.02112418,0.02188434,59,0,8,0,67,64,SMOS41.txt,SMOS4.txt
+SMOS,unverified_glossary_and_relations_preview,67,0.00083667,0.00360269,34,2,31,5,67,39,SMOS36.txt,SMOS1.txt

@@ -1,0 +1,32 @@
+﻿id,project,kind,proposal,source_file,lines,source_excerpt,draft_rationale,decision,reviewer,reason
+iTrust-01,iTrust,glossary,DAO = database access object,AccessDAO.java,14-14," * DAO stands for Database Access Object. All DAOs are intended to be reflections of the database, that is,",Class documentation expands DAO.,,,
+iTrust-02,iTrust,glossary,ICD = international statistical classification of diseases and related health problems,UpdateICDCodeListAction.java,16-17," * The International Statistical Classification of Diseases and Related Health Problems 
+ * (most commonly known by the abbreviation ICD) provides codes to classify diseases and a ",Code documentation identifies the long name.,,,
+iTrust-03,iTrust,glossary,LOINC = logical observation identifiers names and codes,UpdateLOINCListAction.java,17-18," * Logical Observation Identifiers Names and Codes (LOINC) is a database and universal
+ *  standard for identifying medical laboratory observations. ",Code documentation spells out LOINC.,,,
+iTrust-04,iTrust,glossary,NDC = national drug code,UpdateNDCodeListAction.java,16-17," * The National Drug Code (NDC) is a universal product identifier used in the
+ * United States for drugs intended for human use.",Code documentation spells out NDC.,,,
+iTrust-05,iTrust,relationship,AccessDAO.java -> DBUtil.java (call),AccessDAO.java,62-62,"			DBUtil.closeConnection(conn, ps);",The DAO invokes the shared connection cleanup function.,,,
+iTrust-06,iTrust,relationship,AddHCPAction.java -> RandomPassword.java (call),AddHCPAction.java,58-58,"		String pwd = authDAO.addUser(newMID, Role.HCP, RandomPassword.getRandomPassword());",The add-personnel action obtains an initial password from the helper.,,,
+iTrust-07,iTrust,relationship,AddOfficeVisitAction.java -> PatientBaseAction.java (inheritance),AddOfficeVisitAction.java,22-22,public class AddOfficeVisitAction extends PatientBaseAction {,The action extends the patient action base class.,,,
+iTrust-08,iTrust,relationship,AddPatientValidator.java -> BeanValidator.java (inheritance),AddPatientValidator.java,14-14,public class AddPatientValidator extends BeanValidator<PatientBean> {,The patient validator extends the generic validator.,,,
+eTour-01,eTour,glossary,PR = refreshment point,CardPR.java,163-164,"     * @Param unisa.gps.etour.bean.BeanRefreshmentPoint PR - the bean contains the
+     *        data of RefreshmentPoint selected.",Parameter documentation uses PR for a refreshment point.,,,
+eTour-02,eTour,glossary,BC = cultural heritage,CulturalHeritage.java,249-251,"        if (null == btnNewBC) {
+            btnNewBC = new JButton();
+            btnNewBC.setText(""<html> New <br> Cultural Heritage </ html>"");",The button name uses BC for the Cultural Heritage action. Check the scope of the abbreviation.,,,
+eTour-03,eTour,glossary,refreshment point = puntodiristoro,DBRefreshmentPoint.java,35-36,"// Query clearing
+            String query = ""DELETE FROM puntodiristoro WHERE Id ="" + pIdRefreshmentPoint;",The refreshment point deletion query uses this database table name.,,,
+eTour-04,eTour,relationship,AdvancedSearch.java -> Search.java (inheritance),AdvancedSearch.java,3-3,public class AdvancedSearch extends Search {,Advanced search extends the shared search implementation.,,,
+eTour-05,eTour,relationship,AdvertisementAgencyManager.java -> AdvertisementManager.java (inheritance),AdvertisementAgencyManager.java,20-20,public class AdvertisementAgencyManager extends AdvertisementManager implements IAdvertisementAgencyManager {,The agency-specific manager extends the advertisement manager.,,,
+eTour-06,eTour,relationship,AdvertisementAgencyManager.java -> ControlData.java (call),AdvertisementAgencyManager.java,77-77,            if (!ControlData.checkBeanNews(pNews)) {,The manager invokes validation on the news bean.,,,
+eTour-07,eTour,relationship,AdvertisementManager.java -> ControlData.java (call),AdvertisementManager.java,57-57,            if (!ControlData.checkBeanBanner(banner)) {,The manager invokes validation on the banner bean.,,,
+SMOS-01,SMOS,glossary,username = nome utente,DBConnessione.java,74-76,"                USER_NAME = properties.getProperty(""connection.username"");
+                if (USER_NAME.equals("""")) {
+                    USER_NAME = Utility.ottenereUtenteNome();",The connection username property falls back to the helper named ottenereUtenteNome.,,,
+SMOS-02,SMOS,glossary,nuovo utente = insert user,managerUser.html,53-53,"           <p class=""button""><a class=""menuLink"" href=""../userManagement/insertUser.jsp"">Nuovo Utente</a></p>",The Italian button text points to the insertUser action.,,,
+SMOS-03,SMOS,glossary,esci = logout,managerUser.html,42-42,"                 [<a style=""font-size:11px"" class=""genericLink"" href=""../../logout"">Esci</a>, <a style=""font-size:11px"" class=""genericLink"" href=""../userManagement/alterPersonalDate.jsp"">Modifica Password</a>]",The interface links Esci to the logout endpoint.,,,
+SMOS-04,SMOS,relationship,DBConnessione.java -> Ambiente.java (call),DBConnessione.java,57-57,            File fileProp = new File(Ambiente.ottenerePoolPropertiesPath());,Connection setup invokes the environment path helper.,,,
+SMOS-05,SMOS,relationship,MailUtility.java -> Utility.java (call),MailUtility.java,15-15,"		props.put(""mail.smtp.host"", Utility.ottenereServerSmtp());",Mail setup reads the SMTP server setting from Utility.,,,
+SMOS-06,SMOS,relationship,ServletAggiornamentoGiustificato.java -> ManagerRegistrati.java (call),ServletAggiornamentoGiustificato.java,40-40,		ManagerRegistrati mR= ManagerRegistrati.ottenereIstanza();,The servlet obtains the register manager from its static factory.,,,
+SMOS-07,SMOS,relationship,ServletAggiornamentoInsegnamento.java -> ManagerInsegnamento.java (call),ServletAggiornamentoInsegnamento.java,49-49,		ManagerInsegnamento managerTeaching = ManagerInsegnamento.ottenereIstanza();,The servlet obtains the teaching manager from its static factory.,,,

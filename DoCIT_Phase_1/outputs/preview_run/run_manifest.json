@@ -1,0 +1,75 @@
+{
+  "stage": "development_exploratory",
+  "archive_sha256": "b7df2936d6304ccbe75c20f7f96f431b23861f0f9bbb90325774efade39bda62",
+  "draft_sha256": "7596cbd3f37930a45a309544332ea2df79e8b35afc91595029e9f47d94de8305",
+  "review_sha256": "0efbbeb5629346ee3b300e4c892f3c4add0eb43b2b960fecf401b38a5b1f6733",
+  "code_sha256": {
+    "run_experiment.py": "2e6f72f29300fe3716c5dabbb5e24403cb3b203d6bb6776177883fcafca2c14a",
+    "datasets.py": "e36efc5286fca8466058a617ec65cd9018998123aa10851c0fcf931ad87a249e",
+    "java_graph.py": "06a34c506e5724e8b4da80d97c4b575cfb30c637bb196647179a36ebb6037c3d",
+    "statistics_plan.py": "98950df910a728c2983c3510f9d8b7aaf6e36c5f84c60e2b946d39055e8f15af"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "javalang": "0.13.0"
+  },
+  "weights": {
+    "glossary": 0.1,
+    "relation": 0.1,
+    "status": "fixed preview; not tuned or frozen"
+  },
+  "projects": {
+    "iTrust": {
+      "draft_entries": 8,
+      "verified_comparison": false,
+      "accepted_entries": 0,
+      "static_graph": {
+        "parsed_java_files": 226,
+        "failed_java_files": [],
+        "directed_evidence_records": 1331,
+        "unique_directed_pairs": 1084,
+        "unresolved_or_external": {
+          "import": 521,
+          "call": 144,
+          "inheritance": 14
+        }
+      }
+    },
+    "eTour": {
+      "draft_entries": 7,
+      "verified_comparison": false,
+      "accepted_entries": 0,
+      "static_graph": {
+        "parsed_java_files": 115,
+        "failed_java_files": [
+          "NewsTableModelTest.java"
+        ],
+        "directed_evidence_records": 443,
+        "unique_directed_pairs": 325,
+        "unresolved_or_external": {
+          "import": 655,
+          "inheritance": 64,
+          "call": 302
+        }
+      }
+    },
+    "SMOS": {
+      "draft_entries": 7,
+      "verified_comparison": false,
+      "accepted_entries": 0,
+      "static_graph": {
+        "parsed_java_files": 98,
+        "failed_java_files": [],
+        "directed_evidence_records": 846,
+        "unique_directed_pairs": 397,
+        "unresolved_or_external": {
+          "import": 667,
+          "inheritance": 87,
+          "call": 198
+        }
+      }
+    }
+  }
+}
