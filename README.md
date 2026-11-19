@@ -1,15 +1,14 @@
 # DoCIT results and verification
 
-DoCIT tests whether verified domain knowledge improves traceability between software requirements and source code. The study and preliminary results are in [DoCIT_Anonymous_Report.pdf](DoCIT_Anonymous_Report.pdf).
+DoCIT tests whether verified domain knowledge improves traceability between software requirements and source code.
 
 | File or folder | Contents |
 |---|---|
-| `DoCIT_Anonymous_Report.pdf` | Anonymous report and preliminary results. |
-| `DoCIT_References.bib` | BibTeX entries for the report’s sources. |
+| `DoCIT_References.bib` | BibTeX entries for the study’s sources. |
 | `DoCIT_Verify_Results.ipynb` | Run the checks in Jupyter from the repository root. |
 | `verify_results.py` | Run the same checks from a terminal. |
 | `DoCIT_Phase_1/` | Complete source for the three-project development preview, the unreviewed knowledge entries, and saved rankings and metrics. |
-| `analyze_phase1.py` and `phase1_observations.csv` | Calculate and record the paired changes and context coverage reported in the draft. |
+| `analyze_phase1.py` and `phase1_observations.csv` | Calculate and record the paired changes and context coverage. |
 | `iTrust_pilot/` | Runnable V2.1 pilot notebook, saved results, and the script used to check average precision and reproduce the exploratory interval. |
 | `data/finegrained-traceability-main.zip` | Required benchmark, available as a separate download. See [Data](#data). |
 
@@ -29,9 +28,9 @@ python -m pip install -r requirements.txt
 python verify_results.py
 ```
 
-The verifier checks the benchmark contents and Phase 1 source checksums, reruns Phase 1, compares the saved ranks and metrics, and checks the saved iTrust metrics and exploratory paired analysis. It prints the path to the fresh Phase 1 outputs. The original pilot and Phase 1 used different TF-IDF fitting rules, which the report describes separately.
+The verifier checks the benchmark contents and Phase 1 source checksums, reruns Phase 1, compares the saved ranks and metrics, and checks the saved iTrust metrics and exploratory paired analysis. It prints the path to the fresh Phase 1 outputs. The original pilot and Phase 1 used different TF-IDF fitting rules.
 
-For Jupyter, open `DoCIT_Verify_Results.ipynb` from this directory and run all cells in a CPU runtime. For the Colab workflow with the full submission ZIP, see [START_HERE.md](START_HERE.md).
+For Jupyter, open `DoCIT_Verify_Results.ipynb` from this directory and run all cells in a CPU runtime.
 
 ## Rerun the original iTrust model inference
 
